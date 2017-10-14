@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "start": "node ./src/app",
+    "nodemon": "nodemon"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}

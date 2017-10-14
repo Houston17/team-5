@@ -14,26 +14,23 @@
     <!-- Bootstrap core CSS     -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Animation library for notifications   -->
-    <link href="assets/css/animate.min.css" rel="stylesheet"/>
-
     <!--  Light Bootstrap Table core CSS    -->
     <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
 
 
-    <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="assets/css/demo.css" rel="stylesheet" />
+
 
 
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+
 </head>
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
+    <div class="sidebar" data-color="grey" data-image="http://media.culturemap.com/crop/45/37/320x240/Search-Homeless-Services-logo_094203.png">
 
     <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
 
@@ -91,7 +88,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Table List</a>
+                    <a class="navbar-brand" href="#">Manage Events</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -143,7 +140,7 @@
                               </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="../welcome.html">
                                 Log out
                             </a>
                         </li>
@@ -152,27 +149,43 @@
             </div>
         </nav>
 
-  <div class="content">
-  	<div class="container-fluid">
-  		<div class="row">
-  			 <div class="col-md-4">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Email Statistics</h4>
-                                <p class="category">Last Campaign Performance</p>
-                            </div>
-                            <div class="content">
-                            	
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-  		</div>
-  	</div>
+        
 
-        </div>
+
+        
+
+      <div id="content">
+        <h1>Google Calendar</h1>
+    <p>Fill these fields to enter a new event in your Google Calendar.</p>
+    <p><label>Select a date: <input type="date" id="date"></label></p>
+    <p><label>Start time <input type="time" id="start"></label>
+       <label>End time: <input type="time" id="end"></label>
+    </p>
+    <p><label>Event description: <input type="text" id="event" size=60></label></p>
+  </div>
+
+    	    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize-button" style="display: none;">Authorize</button>
+    <button id="signout-button" style="display: none;">Sign Out</button>
+</br>
+    <button id="addToCalendar" style="display: none;">Add to Google Calendar</button>
+
+</br>
+
+
+
+  <iframe src="https://calendar.google.com/calendar/embed?src=tuvannguyen33%40gmail.com&ctz=America/Chicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+    <pre id="content"></pre>
+
+    <script src="calendar.js"></script>
+
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+</div>
 
         <footer class="footer">
             <div class="container-fluid">

@@ -14,6 +14,18 @@ body {
     }
 }
 
+h1 {
+	color: green;
+}
+
+.lead{
+	color: navy blue;
+}
+
 .card {
     height: 100%;
+}
+
+card-footer {
+	padding-bottom: 0px;
 }

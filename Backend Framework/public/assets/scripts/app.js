@@ -14,6 +14,9 @@ app.set("public", path.join(__dirname, "public"))
 app.set("view engine", "html")
 app.use(express.static("./public"))
 app.use(cors())
+var engines = require('consolidate');
+app.engine('html', engines.mustache);
+app.set('view engine', 'html');
 
 app.get("/", (req, res) => {
   res.render("index", { title: "My Website", message: "Hello there!" })
@@ -40,7 +43,7 @@ app.get("/clients.html", (req, res) => {
 })
 
 app.get("/signUp.html", (req, res) => {
-  res.render("signUp", { title: "Welcome!" })
+  //res.render("signUp", { title: "Welcome!" })
 })
 
 app.get("https://api.signupgenius.com/v2/k/signups/created/all/?user_key=V0FzMkxZcmVOZlVnclZMVEl6dGhWQT09", (req, res) => {

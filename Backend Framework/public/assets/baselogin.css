@@ -1,9 +1,26 @@
-body
-{
-    background: url('http://coredesignstudio.com/corewordpress/wp-content/uploads/2017/04/search4.jpg') fixed;
-    background-size: cover;
-    padding: 0;
-    margin: 0;
+.content:before {
+  content: "";
+  position: fixed;
+  top: -5%;
+  left: -5%;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+  display: block;
+  background-image: url('http://i.imgur.com/VMb5aPE.gif');
+	background-size:auto 125%;
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.content {
+  overflow: auto;
+  position: relative;
 }
 
 .wrap
@@ -20,7 +37,7 @@ body
 p.form-title
 {
     font-family: 'Open Sans' , sans-serif;
-    font-size: 20px;
+    font-size: 32px;
     font-weight: 600;
     text-align: center;
     color: #FFFFFF;
@@ -35,7 +52,7 @@ form
     margin: 0 auto;
 }
 
-form.login input[type="text"], form.login input[type="password"]
+form.login input[type="text"], form.login input[type="password"], form.login input[type="email"], form.login input[type="firstname"], form.login input[type="lastname"]
 {
     width: 100%;
     margin: 0;
@@ -55,8 +72,8 @@ form.login input[type="text"], form.login input[type="password"]
 
 form.login input[type="submit"]
 {
-    width: 100%;
-    font-size: 14px;
+    width: 109%;
+    font-size: 16px;
     text-transform: uppercase;
     font-weight: 500;
     margin-top: 16px;

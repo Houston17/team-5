@@ -1,5 +1,9 @@
 $(document).ready(function() {
-    $(".card-footer").click(function(){
-        $(this).dialog();
+   $(".btn btn-primary").button().click(function () {
+       $('#dialog_frame').dialog({
+           height:500,
+           width:500,
+           modal:true
+       });
     });
 });

@@ -43,6 +43,14 @@ app.get("/signUp.html", (req, res) => {
   res.render("signUp", { title: "Welcome!" })
 })
 
+app.get("https://api.signupgenius.com/v2/k/signups/created/all/?user_key=V0FzMkxZcmVOZlVnclZMVEl6dGhWQT09", (req, res) => {
+//var signUps = JSON.parse(res);
+  res.render("signUp", {cn: res.data.contactName})
+  console.log(res);
+})
+
+
+
 // var connection = mysql.createConnection({
 //   host     : 'localhost',
 //   user     : 'dbuser',

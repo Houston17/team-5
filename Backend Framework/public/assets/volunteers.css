@@ -25,3 +25,7 @@ h1 {
 .card {
     height: 100%;
 }
+
+card-footer {
+	padding-bottom: 0px;
+}

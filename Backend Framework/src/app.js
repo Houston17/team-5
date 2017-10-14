@@ -38,6 +38,11 @@ app.get("/volunteers.html", (req, res) => {
 app.get("/clients.html", (req, res) => {
   res.render("clients", { title: "Welcome!" })
 })
+
+app.get("/signUp.html", (req, res) => {
+  res.render("signUp", { title: "Welcome!" })
+})
+
 // var connection = mysql.createConnection({
 //   host     : 'localhost',
 //   user     : 'dbuser',
